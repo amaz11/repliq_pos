@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+
+//icons
 import { HiOutlineBars3 } from "react-icons/hi2";
 import { PiNotePencilDuotone } from "react-icons/pi";
 import { MdOutlineLocalShipping } from "react-icons/md";
@@ -30,7 +32,7 @@ const Topbar = ({ setsidebarShow }) => {
 
             <div className='relative transition-all duration-500 lg:hidden'>
                 <BsThreeDotsVertical size={24} onClick={() => setListShow(!listShow)} />
-                <div className={`bg-white z-20 absolute right-8 py-4 flex flex-col gap-4 shadow rounded w-40 ${listShow ? 'top-6' : '-top-80'}`}>
+                <div className={`bg-white z-20 absolute right-4 py-4 flex flex-col gap-4 shadow rounded w-40 ${listShow ? 'top-6' : 'hidden'}`}>
                     {
                         buttons.map(item => <span key={item.id} className='flex  items-center  gap-3 w-full cursor-pointer px-2 pb-2 last:pb-0  border-b last:border-b-0  text-[#5C6AC4] '>
                             {<item.icon size={item.size} />}

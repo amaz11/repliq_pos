@@ -28,7 +28,7 @@ const CartSide = () => {
                     <GoPlusCircle className='cursor-pointer' size={28} />
                 </div>
                 <Table />
-                <div className='mt-3 flex items-center justify-between flex-wrap gap-4'>
+                <div className='my-3 flex items-center justify-between flex-wrap gap-4'>
                     <button className='flex gap-3 cursor-pointer items-center justify-center bg-red-200 py-3 px-4 rounded text-red-600 grow'>
                         <RxCrossCircled size={28} />
                         <span className='font-semibold text-xl'>Cancel</span>

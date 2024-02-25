@@ -6,8 +6,8 @@ import { GrSubtractCircle } from "react-icons/gr";
 const Table = () => {
     return (
         <>
-            <div className='mt-3'>
-                <table className='w-full '>
+            <div className='mt-3 overflow-x-scroll'>
+                <table className='w-full'>
                     <tbody className='group'>
                         {[1, 2, 3, 4, 5].map(item => <tr key={item} className=''>
                             <td className='w-10 px-1 py-2 text-slate-600'><FiEdit size={22} className='cursor-pointer' /></td>
