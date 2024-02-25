@@ -1,0 +1,1 @@
+intialiazed the pos app
