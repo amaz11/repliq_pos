@@ -31,7 +31,7 @@ const Sidebar = ({ setCategory, setCurrentPage }) => {
 
     return (
         <div >
-            <div className='flex gap-4 lg:justify-between items-center flex-wrap'>
+            <div className='flex flex-wrap lg:justify-between items-center gap-4'>
                 <button className={`py-2 px-3 ${activeId === 'allcat' ? 'border-2 text-[#5C6AC4] border-[#5C6AC4]' : 'border border-slate-500 text-slate-700'} rounded font-semibold grow`} onClick={() => {
                     setActiveId('allcat')
                     setCategory('')
@@ -59,9 +59,9 @@ const Sidebar = ({ setCategory, setCurrentPage }) => {
             </div>
 
             <div className={`bg-white fixed ${categoryListShow ? '' : "-mr-[450px]"} w-72  sm:w-80 md:w-96 top-0 right-0 h-full z-30 py-4 px-8 transition-all duration-500`}>
-                <div className='absolute top-2 -left-8 text-white'><RxCross2 size={30} className='cursor-pointer' onClick={() => setCategoryListShow(!categoryListShow)} /></div>
-                <h2 className='font-semibold text-3xl text-center mb-8'>Categories</h2>
-                <div className='flex items-center flex-wrap gap-4'>
+                <div className='top-2 -left-8 absolute text-white'><RxCross2 size={30} className='cursor-pointer' onClick={() => setCategoryListShow(!categoryListShow)} /></div>
+                <h2 className='mb-8 font-semibold text-3xl text-center'>Categories</h2>
+                <div className='flex flex-wrap items-center gap-4'>
                     {
 
                         isloading ? Array(4).fill(1).map((item, index) => <CategorySkeleton key={index} />) : data?.map((item, index) => <button key={item.id} className={`py-2 px-3 ${activeId === item.id ? 'border-2 text-[#5C6AC4] border-[#5C6AC4]' : 'border border-slate-500 text-slate-700'} rounded font-semibold grow`} onClick={() => setActiveId(item.id)}>
@@ -73,7 +73,7 @@ const Sidebar = ({ setCategory, setCurrentPage }) => {
                 </div>
 
             </div>
-            {categoryListShow ? <div className='fixed top-0 left-0 w-full h-full bg-[#B8BBBF] opacity-70 z-20' onClick={() => setCategoryListShow(!categoryListShow)}></div> : null}
+            {categoryListShow ? <div className='top-0 left-0 z-20 fixed bg-[#B8BBBF] opacity-70 w-full h-full' onClick={() => setCategoryListShow(!categoryListShow)}></div> : null}
         </div>
     )
 }

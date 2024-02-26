@@ -14,14 +14,14 @@ const ProductCard = ({ item }) => {
     return (
         <div className='border rounded group'>
             <div className='relative'>
-                <img className='w-full rounded-t' src={item.category.image} onError={imageOnError} loading='lazy' alt="img" />
-                <button className='group-hover:block hidden absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#E7E9F6] text-[#5C6AC4] z-10 text-xs font-medium rounded py-2 px-2' onClick={() => addToCart(item)} >Add To Cart</button>
-                <div className='group-hover:block hidden absolute top-0 left-0 h-full w-full bg-slate-300 opacity-50'>
+                <img className='rounded-t w-full' src={item.category.image} onError={imageOnError} loading='lazy' alt="img" />
+                <button className='group-hover:block top-1/2 left-1/2 z-10 absolute hidden bg-[#E7E9F6] px-2 py-2 rounded font-medium text-[#5C6AC4] text-xs transform -translate-x-1/2 -translate-y-1/2' onClick={() => addToCart(item)} >Add To Cart</button>
+                <div className='group-hover:block top-0 left-0 absolute hidden bg-slate-300 opacity-50 w-full h-full'>
                 </div>
             </div>
             <div className='text-center'>
-                <p className='text-slate-600 text-lg font-semibold border-b p-1'>${item.price}</p>
-                <p className='text-slate-600 text-lg font-semibold p-1 truncate px-2'>{item.title}</p>
+                <p className='p-1 border-b font-semibold text-lg text-slate-600'>${item.price}</p>
+                <p className='px-2 p-1 font-semibold text-lg text-slate-600 truncate'>{item.title}</p>
             </div>
         </div>
     )

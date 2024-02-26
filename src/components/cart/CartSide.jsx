@@ -20,7 +20,7 @@ const CartSide = () => {
             <Topbar setsidebarShow={setsidebarShow} />
             <Sidebar sidebarShow={sidebarShow} setsidebarShow={setsidebarShow} />
             <div className='px-4 pt-3'>
-                <div className='flex items-center justify-between px-4 py-4 rounded bg-[#E7E9F6] text-[#5C6AC4]'>
+                <div className='flex justify-between items-center bg-[#E7E9F6] px-4 py-4 rounded text-[#5C6AC4]'>
                     <div className='flex items-center gap-2'>
                         <IoPersonCircleOutline size={28} />
                         <span className='font-semibold text-sm md:text-base lg:text-xl'>Steve Jobs</span>

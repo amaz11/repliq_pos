@@ -17,19 +17,19 @@ const PaymentSide = () => {
     const [activeId, setActiveId] = useState(1)
 
     return (
-        <div className='border-l border-l-slate-400 py-5 px-4 md:px-8'>
-            <div className='flex items-center justify-between px-6 py-6 rounded border border-slate-300'>
-                <span className='font-base text-sm md:text-base lg:text-xl text-slate-500'>Order Amount</span>
-                <span className='text-sm md:text-base lg:text-2xl font-bold'>
+        <div className='px-4 md:px-8 py-5 border-l border-l-slate-400'>
+            <div className='flex justify-between items-center border-slate-300 px-6 py-6 border rounded'>
+                <span className='font-base text-slate-500 text-sm md:text-base lg:text-xl'>Order Amount</span>
+                <span className='font-bold text-sm md:text-base lg:text-2xl'>
                     ${tolaAmount}
                 </span>
             </div>
-            <div className='mt-4 flex bg-white border border-slate-300 flex-wrap sm:flex-nowrap'>
-                <div className='w-full md:w-60 border-b sm:border-b-0 sm:border-r border-slate-300 py-4'>
+            <div className='flex flex-wrap sm:flex-nowrap border-slate-300 bg-white mt-4 border'>
+                <div className='border-slate-300 py-4 sm:border-r border-b sm:border-b-0 w-full md:w-60'>
                     <ul>
                         {
                             menus.map(item => <li key={item.id} onClick={() => setActiveId(item.id)} className={`p-3 mb-3 ${item.id === activeId ? 'bg-[#E7E9F6] text-[#5C6AC4]' : 'text-slate-600'}`}>
-                                <Link className='flex gap-4 items-center cursor-pointer'>
+                                <Link className='flex items-center gap-4 cursor-pointer'>
                                     {<item.icon size={item.size} />}
                                     <span className='font-medium text-xl'>{item.lable}</span>
                                 </Link>

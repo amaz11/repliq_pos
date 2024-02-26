@@ -19,9 +19,9 @@ const Sidebar = ({ sidebarShow, setsidebarShow }) => {
     return (
         <>
             <div className={`fixed top-0 left-0 bg-white h-full ${sidebarShow ? '' : '-ml-96'} w-64 md:w-80 z-30 flex flex-col justify-between pb-4 transition-all duration-500`}>
-                <div className='absolute top-2 -right-8 text-white'><RxCross2 size={30} className='cursor-pointer' onClick={() => setsidebarShow(!sidebarShow)} /></div>
+                <div className='top-2 -right-8 absolute text-white'><RxCross2 size={30} className='cursor-pointer' onClick={() => setsidebarShow(!sidebarShow)} /></div>
                 <div>
-                    <div className='p-4 bg-[#EFEFEF]'>
+                    <div className='bg-[#EFEFEF] p-4'>
                         <div className='mb-6'>
                             <img src={logo} className='mx-auto w-48' alt="logo" />
                         </div>
@@ -34,7 +34,7 @@ const Sidebar = ({ sidebarShow, setsidebarShow }) => {
                         <ul>
                             {
                                 menus.map(item => <li key={item.id} onClick={() => setActiveId(item.id)} className={`p-3 mb-3 ${item.id === activeId ? 'bg-[#E7E9F6] text-[#5C6AC4]' : 'text-slate-600'}`}>
-                                    <Link className='flex gap-4 items-center cursor-pointer'>
+                                    <Link className='flex items-center gap-4 cursor-pointer'>
                                         {<item.icon size={item.size} />}
                                         <span className='font-medium text-xl'>{item.lable}</span>
                                     </Link>
@@ -44,10 +44,10 @@ const Sidebar = ({ sidebarShow, setsidebarShow }) => {
                     </div>
                 </div>
                 <div className='px-4'>
-                    <button className='w-full pb-2 pt-1 border-2  text-slate-600 text-xl font-semibold rounded-md'>Logout</button>
+                    <button className='border-2 pt-1 pb-2 rounded-md w-full font-semibold text-slate-600 text-xl'>Logout</button>
                 </div>
             </div>
-            {sidebarShow ? <div className='fixed top-0 left-0 w-full h-full bg-[#B8BBBF] opacity-70 z-20' onClick={() => setsidebarShow(!sidebarShow)}></div> : null}
+            {sidebarShow ? <div className='top-0 left-0 z-20 fixed bg-[#B8BBBF] opacity-70 w-full h-full' onClick={() => setsidebarShow(!sidebarShow)}></div> : null}
         </>
     )
 }

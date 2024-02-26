@@ -8,21 +8,21 @@ const CardForm = () => {
             <div className='flex flex-col justify-between gap-60'>
                 <div>
                     <div className='mb-6'>
-                        <input type="text" className='w-full focus:outline-none focus:border-slate-500 border-b-2  text-lg' placeholder='Card Name' />
+                        <input type="text" className='w-full focus:outline-none focus:border-slate-500 border-b-2 text-lg' placeholder='Card Name' />
                     </div>
                     <div className='mb-6'>
-                        <input type="text" className='w-full focus:outline-none focus:border-slate-500 border-b-2  text-lg' placeholder='Card Number' />
+                        <input type="text" className='w-full focus:outline-none focus:border-slate-500 border-b-2 text-lg' placeholder='Card Number' />
                     </div>
                     <div className='mb-6'>
-                        <input type="text" className='w-full focus:outline-none focus:border-slate-500 border-b-2  text-lg' placeholder='Card Expire Date' />
+                        <input type="text" className='w-full focus:outline-none focus:border-slate-500 border-b-2 text-lg' placeholder='Card Expire Date' />
                     </div>
                     <div className='mb-6'>
-                        <input type="text" className='w-full focus:outline-none focus:border-slate-500 border-b-2  text-lg' placeholder='Card Screet' />
+                        <input type="text" className='w-full focus:outline-none focus:border-slate-500 border-b-2 text-lg' placeholder='Card Screet' />
                     </div>
                 </div>
-                <div className='flex items-center gap-4 flex-wrap'>
-                    <button className='font-semibold flex gap-3 cursor-pointer items-center justify-center bg-red-200 py-3 px-4 rounded text-red-600 grow'> <RxCrossCircled size={28} />Cancle</button>
-                    <button onClick={() => setPay(!pay)} className='flex gap-3 cursor-pointer items-center justify-center py-3 px-4 rounded bg-blue-600 text-white grow'>
+                <div className='flex flex-wrap items-center gap-4'>
+                    <button className='flex justify-center items-center gap-3 bg-red-200 px-4 py-3 rounded font-semibold text-red-600 cursor-pointer grow'> <RxCrossCircled size={28} />Cancle</button>
+                    <button onClick={() => setPay(!pay)} className='flex justify-center items-center gap-3 bg-blue-600 px-4 py-3 rounded text-white cursor-pointer grow'>
                         <FaAmazonPay size={28} />
                         <span className='font-semibold text-sm sm:text-base md:text-xl' >Complete Payment</span>
                     </button>

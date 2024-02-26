@@ -3,11 +3,11 @@ import React from 'react'
 const SkeletonLoading = () => {
     return (
         <div>
-            <div className='border rounded group animate-pulse shadow'>
-                <div className='relative h-40 bg-slate-300'></div>
-                <div className='text-center mt-2'>
-                    <p className='text-lg font-semibold border-b p-1 bg-slate-200 mb-2'></p>
-                    <p className='text-lg font-semibold p-1 truncate px-2 bg-slate-200'></p>
+            <div className='shadow border rounded animate-pulse group'>
+                <div className='relative bg-slate-300 h-40'></div>
+                <div className='mt-2 text-center'>
+                    <p className='bg-slate-200 mb-2 p-1 border-b font-semibold text-lg'></p>
+                    <p className='bg-slate-200 px-2 p-1 font-semibold text-lg truncate'></p>
                 </div>
             </div>
         </div>

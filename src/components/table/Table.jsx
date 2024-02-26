@@ -6,6 +6,9 @@ import { AiOutlinePlusCircle } from "react-icons/ai";
 import { GrSubtractCircle } from "react-icons/gr";
 import { CartContextCreate } from '../../hoc/cartContext';
 
+// css
+import './table.css';
+
 const Table = () => {
     const { cart, removeFromCart, increseQuantity, deincreseQuantity, setTotalAmount } = useContext(CartContextCreate)
     const subTotal = cart?.reduce((a, b) => (+a) + (+b.price * b.quantity), 0)
@@ -58,7 +61,7 @@ const Table = () => {
                                 <td className='px-1 py-2 md:py-3 lg:py-4 opacity-0'>n/a</td>
                                 <td className='pl-2 opacity-0'>n/a</td>
                                 <td className='text-center opacity-0'>n/a</td>
-                                <td className=' text-slate-500 font-medium text-sm md:text-base lg:text-xl border-b'>Shipping</td>
+                                <td className='text-slate-500 font-medium text-sm md:text-base lg:text-xl border-b'>Shipping</td>
                                 <td className='text-right pr-3 text-slate-700 font-medium text-sm md:text-base lg:text-xl border-b'>${shipping}</td>
                                 <td className='text-center opacity-0'>n/a</td>
                             </tr>

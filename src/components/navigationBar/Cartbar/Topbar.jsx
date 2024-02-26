@@ -17,12 +17,12 @@ const buttons = [
 const Topbar = ({ setsidebarShow }) => {
     const [listShow, setListShow] = useState(false)
     return (
-        <div className='flex gap-4 justify-between items-center px-5 py-3' >
+        <div className='flex justify-between items-center gap-4 px-5 py-3' >
             <HiOutlineBars3 className='cursor-pointer' size={30} onClick={() => setsidebarShow(true)} />
-            <div className='hidden lg:block'>
-                <div className='flex gap-4 items-center flex-wrap justify-end'>
+            <div className='lg:block hidden'>
+                <div className='flex flex-wrap justify-end items-center gap-4'>
                     {
-                        buttons.map(item => <button key={item.id} className='flex gap-3 cursor-pointer items-center bg-[#E7E9F6] py-2 pl-2 pr-4 rounded text-[#5C6AC4]'>
+                        buttons.map(item => <button key={item.id} className='flex items-center gap-3 bg-[#E7E9F6] py-2 pr-4 pl-2 rounded text-[#5C6AC4] cursor-pointer'>
                             {<item.icon size={item.size} />}
                             <span className='font-medium text-lg'>{item.label}</span>
                         </button>)
@@ -30,11 +30,11 @@ const Topbar = ({ setsidebarShow }) => {
                 </div>
             </div>
 
-            <div className='relative transition-all duration-500 lg:hidden'>
+            <div className='relative lg:hidden transition-all duration-500'>
                 <BsThreeDotsVertical size={24} onClick={() => setListShow(!listShow)} />
                 <div className={`bg-white z-20 absolute right-4 py-4 flex flex-col gap-4 shadow rounded w-40 ${listShow ? 'top-6' : 'hidden'}`}>
                     {
-                        buttons.map(item => <span key={item.id} className='flex  items-center  gap-3 w-full cursor-pointer px-2 pb-2 last:pb-0  border-b last:border-b-0  text-[#5C6AC4] '>
+                        buttons.map(item => <span key={item.id} className='flex items-center gap-3 px-2 pb-2 last:pb-0 border-b last:border-b-0 w-full text-[#5C6AC4] cursor-pointer '>
                             {<item.icon size={item.size} />}
                             <span className='font-medium text-base'>{item.label}</span>
                         </span>)
@@ -42,7 +42,7 @@ const Topbar = ({ setsidebarShow }) => {
                 </div>
             </div>
 
-            {listShow ? <div className='fixed top-0 left-0 w-full h-full bg-[#B8BBBF] opacity-0' onClick={() => setListShow(!listShow)}></div> : null}
+            {listShow ? <div className='top-0 left-0 fixed bg-[#B8BBBF] opacity-0 w-full h-full' onClick={() => setListShow(!listShow)}></div> : null}
         </div>
     )
 }
