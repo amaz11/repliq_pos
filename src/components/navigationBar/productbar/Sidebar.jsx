@@ -73,7 +73,7 @@ const Sidebar = ({ setCategory, setCurrentPage }) => {
                 </div>
 
             </div>
-            {categoryListShow ? <div className='absolute top-0 left-0 w-full h-full bg-[#B8BBBF] opacity-70 z-20' onClick={() => setCategoryListShow(!categoryListShow)}></div> : null}
+            {categoryListShow ? <div className='fixed top-0 left-0 w-full h-full bg-[#B8BBBF] opacity-70 z-20' onClick={() => setCategoryListShow(!categoryListShow)}></div> : null}
         </div>
     )
 }

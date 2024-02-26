@@ -47,7 +47,7 @@ const Sidebar = ({ sidebarShow, setsidebarShow }) => {
                     <button className='w-full pb-2 pt-1 border-2  text-slate-600 text-xl font-semibold rounded-md'>Logout</button>
                 </div>
             </div>
-            {sidebarShow ? <div className='absolute top-0 left-0 w-full h-full bg-[#B8BBBF] opacity-70 z-20' onClick={() => setsidebarShow(!sidebarShow)}></div> : null}
+            {sidebarShow ? <div className='fixed top-0 left-0 w-full h-full bg-[#B8BBBF] opacity-70 z-20' onClick={() => setsidebarShow(!sidebarShow)}></div> : null}
         </>
     )
 }

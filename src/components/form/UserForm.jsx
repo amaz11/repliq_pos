@@ -26,7 +26,7 @@ const UserForm = () => {
                 <span>Add More Details</span>
             </div>
 
-            <button className='bg-[#3674D9] w-full text-white text-2xl font-medium py-4 mb-6'>Update</button>
+            <button className='bg-[#3674D9] w-full text-white text-2xl font-medium py-4 mb-6 rounded'>Update</button>
         </form>
     )
 }

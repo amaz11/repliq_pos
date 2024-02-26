@@ -21,10 +21,10 @@ const CardForm = () => {
                     </div>
                 </div>
                 <div className='flex items-center gap-4 flex-wrap'>
-                    <button className='font-semibold flex gap-3 cursor-pointer items-center justify-center bg-red-200 py-3 px-4 rounded text-red-600'> <RxCrossCircled size={28} />Cancle</button>
+                    <button className='font-semibold flex gap-3 cursor-pointer items-center justify-center bg-red-200 py-3 px-4 rounded text-red-600 grow'> <RxCrossCircled size={28} />Cancle</button>
                     <button onClick={() => setPay(!pay)} className='flex gap-3 cursor-pointer items-center justify-center py-3 px-4 rounded bg-blue-600 text-white grow'>
                         <FaAmazonPay size={28} />
-                        <span className='font-semibold text-xl' >Complete Payment</span>
+                        <span className='font-semibold text-sm sm:text-base md:text-xl' >Complete Payment</span>
                     </button>
                 </div>
             </div>

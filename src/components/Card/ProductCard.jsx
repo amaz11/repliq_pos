@@ -10,7 +10,6 @@ const ProductCard = ({ item }) => {
     const { addToCart } = useContext(CartContextCreate)
     const imageOnError = (event) => {
         event.currentTarget.src = errorImage;
-        console.log('imageError');
     }
     return (
         <div className='border rounded group'>

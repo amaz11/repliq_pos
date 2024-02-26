@@ -42,7 +42,7 @@ const Topbar = ({ setsidebarShow }) => {
                 </div>
             </div>
 
-            {listShow ? <div className='absolute top-0 left-0 w-full h-full bg-[#B8BBBF] opacity-0' onClick={() => setListShow(!listShow)}></div> : null}
+            {listShow ? <div className='fixed top-0 left-0 w-full h-full bg-[#B8BBBF] opacity-0' onClick={() => setListShow(!listShow)}></div> : null}
         </div>
     )
 }

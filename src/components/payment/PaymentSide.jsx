@@ -24,8 +24,8 @@ const PaymentSide = () => {
                     ${tolaAmount}
                 </span>
             </div>
-            <div className='mt-4 flex bg-white border border-slate-300 flex-wrap'>
-                <div className='w-full md:w-60 border-r border-slate-300 py-4'>
+            <div className='mt-4 flex bg-white border border-slate-300 flex-wrap sm:flex-nowrap'>
+                <div className='w-full md:w-60 border-b sm:border-b-0 sm:border-r border-slate-300 py-4'>
                     <ul>
                         {
                             menus.map(item => <li key={item.id} onClick={() => setActiveId(item.id)} className={`p-3 mb-3 ${item.id === activeId ? 'bg-[#E7E9F6] text-[#5C6AC4]' : 'text-slate-600'}`}>
