@@ -18,7 +18,7 @@ const Sidebar = ({ sidebarShow, setsidebarShow }) => {
     const [activeId, setActiveId] = useState(1)
     return (
         <>
-            <div className={`fixed top-0 left-0 bg-white h-full ${sidebarShow ? '' : '-ml-96'} w-64 md:w-80 z-20 flex flex-col justify-between pb-4 transition-all duration-500`}>
+            <div className={`fixed top-0 left-0 bg-white h-full ${sidebarShow ? '' : '-ml-96'} w-64 md:w-80 z-30 flex flex-col justify-between pb-4 transition-all duration-500`}>
                 <div className='absolute top-2 -right-8 text-white'><RxCross2 size={30} className='cursor-pointer' onClick={() => setsidebarShow(!sidebarShow)} /></div>
                 <div>
                     <div className='p-4 bg-[#EFEFEF]'>
@@ -47,7 +47,7 @@ const Sidebar = ({ sidebarShow, setsidebarShow }) => {
                     <button className='w-full pb-2 pt-1 border-2  text-slate-600 text-xl font-semibold rounded-md'>Logout</button>
                 </div>
             </div>
-            {sidebarShow ? <div className='absolute top-0 left-0 w-full h-full bg-[#B8BBBF] opacity-70' onClick={() => setsidebarShow(!sidebarShow)}></div> : null}
+            {sidebarShow ? <div className='absolute top-0 left-0 w-full h-full bg-[#B8BBBF] opacity-70 z-20' onClick={() => setsidebarShow(!sidebarShow)}></div> : null}
         </>
     )
 }
