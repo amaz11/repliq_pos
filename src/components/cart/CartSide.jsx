@@ -9,10 +9,12 @@ import Table from '../table/Table';
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { GoPlusCircle } from "react-icons/go";
 import ButtonGroup from '../ButtonGroup/ButtonGroup';
+import Modal from '../modal';
 
 
 const CartSide = () => {
     const [sidebarShow, setsidebarShow] = useState(false)
+    const [modalShow, setModalShow] = useState(false)
     return (
         <div>
             <Topbar setsidebarShow={setsidebarShow} />
@@ -23,12 +25,12 @@ const CartSide = () => {
                         <IoPersonCircleOutline size={28} />
                         <span className='font-semibold text-sm md:text-base lg:text-xl'>Steve Jobs</span>
                     </div>
-                    <GoPlusCircle className='cursor-pointer' size={28} />
+                    <GoPlusCircle className='cursor-pointer' size={28} onClick={() => setModalShow(!modalShow)} />
                 </div>
                 <Table />
                 <ButtonGroup />
             </div>
-
+            {modalShow ? <Modal modalShow={modalShow} setModalShow={setModalShow} /> : null}
         </div>
     )
 }

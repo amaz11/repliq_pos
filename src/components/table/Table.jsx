@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 // icons
 import { MdDeleteOutline } from "react-icons/md";
 import { FiEdit } from "react-icons/fi";
@@ -7,11 +7,15 @@ import { GrSubtractCircle } from "react-icons/gr";
 import { CartContextCreate } from '../../hoc/cartContext';
 
 const Table = () => {
-    const { cart, removeFromCart, increseQuantity, deincreseQuantity } = useContext(CartContextCreate)
+    const { cart, removeFromCart, increseQuantity, deincreseQuantity, setTotalAmount } = useContext(CartContextCreate)
     const subTotal = cart?.reduce((a, b) => (+a) + (+b.price * b.quantity), 0)
     const tax = 25
     const shipping = 50
     const discount = 0
+    useEffect(() => {
+        const amount = (subTotal + tax + shipping) - discount;
+        setTotalAmount(amount)
+    }, [cart])
     return (
         <>
             <div className='mt-6 overflow-x-scroll md:overflow-x-auto'>

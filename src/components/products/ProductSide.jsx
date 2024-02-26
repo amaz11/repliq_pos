@@ -5,11 +5,11 @@ import Topbar from '../navigationBar/productbar/Topbar'
 import Sidebar from '../navigationBar/productbar/Sidebar'
 import ProductCard from '../Card/ProductCard'
 import SkeletonLoading from '../skeleton/skeletonLoading'
+import ErrorMessage from '../error/ErrorMessage'
 
 // icons 
 import { MdNavigateNext } from "react-icons/md";
 import { MdNavigateBefore } from "react-icons/md";
-import ErrorMessage from '../error/ErrorMessage'
 
 const ProductSide = () => {
     const [data, setData] = useState([])
@@ -42,9 +42,9 @@ const ProductSide = () => {
     }, [currentPage, category])
 
     return (
-        <div>
+        <div className='h-full'>
             <Topbar />
-            <div className='py-5 px-8 border-l border-l-slate-400 h-full'>
+            <div className='py-5 px-8 border-l border-l-slate-400 h-full    '>
                 <Sidebar setCategory={setCategory} setCurrentPage={setCurrentPage} />
                 <div className='mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4'>
                     {isloading ? Array(10).fill(1).map((item, index) => <SkeletonLoading key={index} />) : data?.map(item => <ProductCard key={item.id} item={item} />)}
